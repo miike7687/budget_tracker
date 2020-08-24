@@ -23,7 +23,7 @@ self.addEventListener("install", function (evt) {
 
   self.skipWaiting();
 });
-
+// Remove old data from the cache to activate
 self.addEventListener("activate", function (evt) {
   evt.waitUntil(
     caches.keys().then((keyList) => {
